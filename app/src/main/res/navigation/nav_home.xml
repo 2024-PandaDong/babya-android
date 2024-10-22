@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/quizFragment">
+    <fragment
+        android:id="@+id/findCompanyFragment"
+        android:name="kr.pandadong2024.babya.home.find_company.FindCompanyFragment"
+        android:label="d"
+        tools:layout="@layout/fragment_find_company" >
+        <action
+            android:id="@+id/action_findCompanyFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_findCompanyFragment_to_companyDetailsFragment"
+            app:destination="@id/companyDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diaryFragment"
+        android:name="kr.pandadong2024.babya.home.diary.DiaryFragment"
+        android:label="s"
+        tools:layout="@layout/fragment_diary" >
+        <action
+            android:id="@+id/action_diaryFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_diaryFragment_to_detailWriterFragment"
+            app:destination="@id/detailWriterFragment" />
+        <action
+            android:id="@+id/action_diaryFragment_to_detailPublicFragment"
+            app:destination="@id/detailPublicFragment" />
+        <action
+            android:id="@+id/action_diaryFragment_to_editDiaryFragment"
+            app:destination="@id/editDiaryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/todoListFragment"
+        android:name="kr.pandadong2024.babya.home.todo_list.TodoListFragment"
+        android:label="g"
+        tools:layout="@layout/fragment_todo_list" >
+        <action
+            android:id="@+id/action_todoListFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="kr.pandadong2024.babya.home.profile.ProfileFragment"
+        android:label="f"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_profileModifyFragment"
+            app:destination="@id/profileModifyFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="kr.pandadong2024.babya.home.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_companyDetailsFragment"
+            app:destination="@id/companyDetailsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_policyContentFragment"
+            app:destination="@id/policyContentFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_findCompanyFragment2"
+            app:destination="@id/findCompanyFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_policyMainFragment"
+            app:destination="@id/policyMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPublicFragment"
+        android:name="kr.pandadong2024.babya.home.diary.detil.DetailPublicFragment"
+        android:label="fragment_detail_public"
+        tools:layout="@layout/fragment_detail_public" >
+        <action
+            android:id="@+id/action_detailPublicFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailWriterFragment"
+        android:name="kr.pandadong2024.babya.home.diary.detil.DetailWriterFragment"
+        android:label="fragment_detail_writer"
+        tools:layout="@layout/fragment_detail_writer" >
+        <action
+            android:id="@+id/action_detailWriterFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+        <action
+            android:id="@+id/action_detailWriterFragment_to_editDiaryFragment"
+            app:destination="@id/editDiaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editDiaryFragment"
+        android:name="kr.pandadong2024.babya.home.diary.EditDiaryFragment"
+        android:label="fragment_edit_diary"
+        tools:layout="@layout/fragment_edit_diary" >
+        <action
+            android:id="@+id/action_editDiaryFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="kr.pandadong2024.babya.home.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/quizFragment"
+            />
+        <action
+            android:id="@+id/action_quizFragment_to_quizResultFragment"
+            app:destination="@id/quizResultFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/quizFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/quizResultFragment"
+        android:name="kr.pandadong2024.babya.home.quiz.QuizResultFragment"
+        android:label="fragment_quiz_result"
+        tools:layout="@layout/fragment_quiz_result" >
+        <action
+            android:id="@+id/action_quizResultFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/quizResultFragment"
+             />
+    </fragment>
+    <fragment
+
+        android:id="@+id/companyDetailsFragment"
+        android:name="kr.pandadong2024.babya.home.find_company.CompanyDetailsFragment"
+        android:label="fragment_company_details"
+        tools:layout="@layout/fragment_company_details" >
+        <action
+            android:id="@+id/action_companyDetailsFragment_to_findCompanyFragment"
+            app:destination="@id/findCompanyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/policyContentFragment"
+        android:name="kr.pandadong2024.babya.home.policy.PolicyContentFragment"
+        android:label="fragment_policy_content"
+        tools:layout="@layout/fragment_policy_content" >
+        <action
+            android:id="@+id/action_policyContentFragment_to_policyMainFragment"
+            app:destination="@id/policyMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/policyMainFragment"
+        android:name="kr.pandadong2024.babya.home.policy.PolicyMainFragment"
+        android:label="fragment_policy_main"
+        tools:layout="@layout/fragment_policy_main" >
+        <action
+            android:id="@+id/action_policyMainFragment_to_policyContentFragment"
+            app:destination="@id/policyContentFragment" />
+        <action
+            android:id="@+id/action_policyMainFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileModifyFragment"
+        android:name="kr.pandadong2024.babya.home.profile.ProfileModifyFragment"
+        android:label="fragment_profile_modify"
+        tools:layout="@layout/fragment_profile_modify" >
+        <action
+            android:id="@+id/action_profileModifyFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileModifyFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="kr.pandadong2024.babya.home.profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileModifyFragment"
+            app:destination="@id/profileModifyFragment" />
+    </fragment>
+
+</navigation>
